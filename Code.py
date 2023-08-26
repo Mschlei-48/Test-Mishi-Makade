@@ -20,7 +20,7 @@ print(data.info())
 features=data.iloc[:,1:]
 target=data.iloc[:,0]
 x_train,x_test,y_train,y_test=train_test_split(features,target,test_size=0.3)
-model=LinearRegression()
+model=Lasso()
 model.fit(x_train,y_train)
 y_pred=model.predict(x_test)
 r2scores=metrics.r2_score(y_test,y_pred)

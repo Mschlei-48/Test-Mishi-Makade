@@ -2,7 +2,7 @@ name: Mishiwork
 on:
   push:
     branches:
-    - main
+    - lasso_experiment
 permissions:
   id-toke: write
   contents: write
