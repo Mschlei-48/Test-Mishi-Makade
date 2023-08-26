@@ -1,8 +1,8 @@
 name: Mishiwork
-on:
-  push:
-    branches:
-    - lasso_experiment
+  on:
+    push:
+      branches:
+      - lasso_experiment
 permissions:
   id-token: write
   contents: write
@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: iterative/setup-cml@v1
       - uses: actions/checkout@v3
+      - uses: iterative/setup-cml@v1
       - name: Step1
         env:
           REPO_TOKEN: ${{secrets.GITHUB_TOKE}}
